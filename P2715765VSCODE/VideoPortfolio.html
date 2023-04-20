@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Portfolio</title>
+    <link rel="stylesheet" href="style 1.css">
+
+
+</head>
+<body>
+        <header class="top header">
+            <h1>Rhea Bhakta: Portfolio</h1>
+        </header>
+        <div class="topnav">
+            <button class="btn" onclick="document.location='RheaBhakta.html'"> Home & Photography</button>
+            <button class="btn" onclick="document.location='VideoPortfolio.html'"> Video Portfolio</button>
+        </div>
+
+        <!--The above div class have been copied and pasted from the home page so that the user can link back to each of the pages -->
+
+        <div class="curved-bg"
+      style="background-color: #FFFF7D;">
+         <p> As part of my university course, I was tasked to create an video advertisement. I chose to produce an advert for Lucozade Sport. My advert aims to showcase the power of Lucozade Sport to enhance athletic performance. It has a focus on how Lucozade Sport helps athletes get inspired and helps sustain energy during intense training sessions. The advert centres around a singular athlete as he pushes though his limits to achieve his goals with the help of Lucozade Sport. Through the visuals and an inspiring message, my advert aims to show how Lucozade Sport is the perfect drink for anyone striving to reach their full potential during their workouts. </p> 
+      </div>
+
+      <!--The below code is Java script. This was sourced from W3 Schools. This Java code has been used because it allows the user to change the size of the video. This is needed because it may help with accessibilty of the webiste for exmaple people with sight issues can make the video bigger or smaller depending on their needs. Even though this code was copied, Parts of it has been edited to suite my webistes style and purpose. For exmaple the buttons were linked to the button style element so they matched the aesthetics of the webiste. Not only this I have also added a cover page to the video to make it look more aesethtically pleasing to the viewer. In this Code I have also added an alternative video element just in case the user cant access the original MP4 format.   -->
+
+      <div style="text-align:center"> <!--This is to centre the video element  -->
+        <button class="btn" button onclick="playPause()">Play/Pause</button> <!--This first part, button class=btn, will be linked to the button style to make the buttons match the rest of the website. This will be done for all 4 of the buttons. This also provides a function where when the button is clicked it will play or pause the video-->
+        <button class="btn" button onclick="makeBig()">Big</button> <!-- This lines function is where when the button is clicked it will make the video big -->
+        <button class="btn" button onclick="makeSmall()">Small</button> <!-- This lines function is where when the button is clicked it will make the video small-->
+        <button class="btn" button onclick="makeNormal()">Normal</button> <!-- This lines fucntion is where when the button is clicked it will make the video of a normal size-->
+        <br><br> <!-- This adds spacing between the button and the video-->
+        <video id="video1" width="420" poster="Lucozade Logo.jpg"> <!-- This line of code shows gives the video element an ID and sets the original width. In this line it also gives the video a font cover-->
+          <source src="Lucozade Advert.mp4" type="video/mp4"> <!-- This creates a source element for the video. The src attribute specifies the URL of the video file to be played-->
+          <source src="Lucozade Advert.webm" type="video/webm"> <!--This is the video element that will be displayed if the users device doesnt support the MP4 video format-->
+          <p>Your browser does not support the HTML Video. Please click <a href='Lucozade Advert.mp4'>here</a> to download an mp4 of the video.</p> <!--This is the text and link that will be displayed if the users device doesnt support the video file-->
+        </video>
+      </div> 
+      
+      <script> /* This is the HTML tag to define the Java Script for my video*/
+      var myVideo = document.getElementById("video1"); /* This first line of Java Script creates the actual piece of java script and this line also assigns it as a video element and has the ID of video 1. The document.getElementById is needed so that the video can be retrieved by the HTML element from the ID*/
+      
+      function playPause() { /* This line starts the Play Pause */
+        if (myVideo.paused) /* This line checks if the video has been paused*/
+          myVideo.play(); /* This line of Java Script uses the Play Method so if the video element is paused it will then play when clicked */
+        else /* This is needed as the alternative to the if statement if the video is not being paused*/
+          myVideo.pause(); /* This is pause method where if the video is playing it will pause playback*/
+      } 
+      
+      function makeBig() { /*This is the start of the Java Script called make big*/
+          myVideo.width = 560; /* This will then set the width of the video element which will make it bigger*/
+      } 
+      
+      function makeSmall() { /* This is the start of the Java Scrip called make small to make the video element smaller*/
+          myVideo.width = 320; /* This will then set the width of the video element which will make the video smaller*/
+      } 
+      
+      function makeNormal() { /*This is the start of the Java Script called make normal which will make the video element the original size*/
+          myVideo.width = 420; /* This will then set the video to 420px which will set the video element to the original size*/
+      } 
+      </script> <!-- This is the closing HTML tag which will close the Java Script-->
+      
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h5>About Me</h5>
+              <p> My name is Rhea Bhakta and I’m a Media Production Student studding at De Montfort University and this webiste shows my work thoughout my time so far at univercity</p>
+            </div>
+            <div class="col-md-4">
+              <h3>Social Media</h3>
+              <ul>
+                <li><a href="https://www.instagram.com/">Social Media</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3>Contact Me</h3>
+              <ul>
+                <li><i class="fa fa-map-marker"></i> DeMonfort University</li>
+                <li><i class="fa fa-phone"></i> 07941100945</li>
+                <li><i class="fa fa-envelope"></i> p2715765@dmu.ac.uk</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-bar">
+          <p>Copyright © 2023 Rhea Bhakta 
+          | All rights reserved</p>
+        </div>
+      </footer>   
+       
+       
+</body>
+</html>
+
