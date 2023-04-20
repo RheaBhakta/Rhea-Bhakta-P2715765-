@@ -1,0 +1,163 @@
+body {
+    background-color: lightblue; 
+    /* this style element means I can change the background of the entire webiste i have chosen light blue to match the top nativgaion image and to make it a fun and engaing portfolio*/
+  }
+  
+  h1 {
+    color: rgb(231, 118, 226); /* This is the header element where in this I have changed the colour of the header text i have chosen this to match the pastel theme of the webiste and the navigation bar*/
+    text-align: center; /* This is the style tag makes the header in the middle of the webiste to make it aesthetically pleasing  */
+    font-family: sans-serif; /* This is style tag means so i can change the font of the text I have chosen this font to make it easy to read*/
+  }
+
+  body header{
+    width: 100%; /* This is the body header style where the width is 100% so it spans across the width of the page and followes the norms of most webiste conventions */
+    background-image:url(Header\ 2.png); /* This is the background image so i can use an image for the header. I have chosen this image because its aesthtically pleasing and the pastel aesthetic is a fun and engaging to the user*/
+    background-size: cover; /* This means the image is the largest size contained within, or covering, the background positioning area*/
+    background-position: center; /* This is to make sure the header is in the middle */
+    padding: 1%; /* The small padding was used to made the bogyheader image the right size */
+    border-radius: 8px; /* This border radius tag is used to round off the corners*/
+
+  }
+
+  .topnav {
+    Padding: 10px; /* This padding is for the gap on the ousdie of the navigation button */
+    Margin: 5px; /* This is the margin for around the top navigation */
+    text-align: center; /* this will align the naviagtion buttons to the centre*/
+  }
+
+  .topnav a{
+    color: black; /* This is the colour of the text for the first paragraph */
+    text-align: center; /* This is to make it central so it matches the aesthetic of the webiste */
+    padding: 18px 14px; /*This is the padding around the top navigation bar and the element. This is to give a nice border around the top nav element which makes it clear to undertand the webiste*/
+    text-decoration: none;
+    font-size: 20px; /*this is the size of the font for the top naviagtion*/
+  }
+
+ .topnav a:hover{ /* This is the the style element for when the user hoovers over the buttons. Where when hovered over the background will change to orange and the text colour will be black*/
+  background-color:bisque; /* This is the background colour for when the user hovers over the button. I have used this orange colour because it matches the header of the website */
+  color: rgb(0, 0, 0); /* This shows caption on hover and the colour of it*/
+ } 
+
+ 
+ .grid-container {
+  display: grid; /*This is the diplay of for the grid contaier for the images */
+  grid-template-columns: repeat(2, 1fr); /* This means the grid is in 2 columns this is used because I have a portfolio of 2 different portfolio images  */
+  gap: 20px; /* This is the gap between grid items this is to make it evenly spaced so it looks appealing */
+}
+
+.grid-item {
+  position: relative; /* This enable absolute positioning for caption */
+}
+
+.grid-item:hover .caption {
+  opacity: 1; /* This shows caption on hover and the opacity of it  */
+}
+
+img {
+  max-width: 100%; /* This prevents image overflow */
+}
+
+img {
+border-radius: 8px; /* This means the images have a curved corner. 8px is used so that it matches the rest of the corners on the website*/
+}
+
+.caption { /* This is the style element of the image captions this is to give a breif description of that the image is about to the viewer*/
+  position: absolute; /*This is to make the caption fixed*/
+  bottom: 0; /*This is to make sure that the caption lines up with the image along the bottom*/
+  left: 0; /* This makes sure the caption lines up with the image along the left ahd side fo the images*/
+  width: 100%; /* This is the width of the caption*/
+  padding: 10px 0; /*This is the size of the gap around the element*/
+  background-color: rgba(0, 0, 0, 0.7); /* The captions background is a transparent black */
+  color: #fff; /* The colour of the text on the caption is white*/
+  font-size: 14px; /* This is the size of the font which is used so it can be easily read*/
+  text-align: center;/* This is so the text in the caption is centred*/
+  opacity: 0; /* The Opacity of the caption is initially hidden until the image is hovered over */
+  transition: opacity 0.2s ease-in-out; /* This is a smooth transition to make it easy to red when it comes in an out */
+  border-radius: 0 0 8px 8px; /*This is the border radius for the captions for the images. I have done this to match the rounded corners for the rest of the webiste  */
+}
+
+.grid-item:hover .caption {
+  opacity: 1; /* This is to show caption on hover */
+}
+
+img {
+  max-width: 100%; /* This is to prevent image overflow */
+}
+
+.curved-bg { /* This is the  style class for the background of the opening paragraph*/
+  border-radius: 8px; /* This is to make the yellow have rounded corders. 8px was used because this is used throughout the website*/
+  padding: 0.5%; /*This is the padding of the element to 0.5% of its width on all sides .*/
+  text-align: center; /*This line centres the curved background*/
+  margin-bottom: 20px; /*This creates a margin around the curved background*/
+}
+
+.container.btn {
+  background-color:bisque;  /* This is the colour the button will turn to when the user hivers over it */
+  color: black;  /* This colour of the outline of the button*/
+
+}
+
+.btn{
+  background-color: rgb(222, 243, 240);  /* This is the colour of the button when it isnt being hovered over  */
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;  /* This is the size of the text of the button */
+  color: #000000; 
+  cursor: pointer;
+  transition: all 0.3s ease;  /* This is the transition of the button. This is used because it gives a smooth transition when hovered over, keeping it easier to read for the user */
+
+}
+
+.btn:hover {
+  background-color: rgb(255, 221, 140); /*This is the colour of the button when the user hovers over it*/
+}
+
+.Video-container {
+  display: flex; /* This willl automatically align the column and rows with auto width and auto height.*/
+  justify-content: center; /* This makes the video in the centre*/
+  margin-left: 200px; /* This is the size of the margin around the video*/
+}
+
+footer {
+  padding: 40px 0; /*This is the size of the padding around the fotter which is 40 pixels on the top and bottom, and 0 pixels on the left and right. this is to give space to make the footer look appealing*/
+}
+
+.container { /* This is the max width of the elements with the class container to 1170 pixels and centers them horizontally by setting the left and right margins to auto.*/
+  max-width: 1170px;  
+  margin: 0 auto;
+}
+
+.col-md-4 {
+  text-align: center; /*This sets the footer to the be cental so it looks aesthetically pleasing*/
+}
+
+h5 { /*This rule sets the font color to black, font size to 20 pixels, font weight to bold, and margin bottom to 20 pixels for all h5 elements. this style was chosen because it matches the rest of my website but also makes sure it follows noral footer conventions*/
+  color: #000000; 
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p { /*This is the style element for the Paragraph elements. This is chosen to match the rest of the footer*/ 
+  color: #000000;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+ul { /*This style rule removes the default bullet point styling and sets the margin and padding of ul (list) elements to 0. This was done because the standard list elements are unappealing and this meant I could make this part of the footer look and match the webiste*/
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px; /* This style rule adds a 10-pixel margin to the bottom of all the list elements.*/
+}
+
+.bottom-bar { /* this style rule sets the background color to to a dark grey colour, font color to white, and text alignment to center for the elements with the class bottom-bar. It also sets the padding to 20 pixels on the top and bottom and rounds the corners by 8 pixels. This is to match the aesthtics of the webiste but also the dark grey colour clearly indicates that its the footer */
+  background-color: #3b3b3b;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 8px;
+}
